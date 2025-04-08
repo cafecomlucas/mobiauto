@@ -38,3 +38,13 @@ Faça uma chamada para a api "rick and morty" e resgate informações dos seguin
 Faça uma função que verifica se a primeira letra de uma string é maiúscula, retornando true ou false.
 
 - Resolução: [./ex_04_checkIfTheFirstLetterIsUppercase.js](./ex_04_checkIfTheFirstLetterIsUppercase.js)
+
+---
+
+## Convite para outros projetos
+
+Deixo o convite para outros projetos:
+
+- Meu site de Portfólio: [cafecomlucas.dev](https://cafecomlucas.dev)
+- Instagram pra cachorros: [github.com/cafecomlucas/origamidDogsReactWeb](https://github.com/cafecomlucas/origamidDogsReactWeb)
+- Mais repositórios: [github.com/cafecomlucas](https://github.com/cafecomlucas)
