@@ -9,22 +9,24 @@ export default function GetPriceButton() {
   const router = useRouter();
 
   /*****
-   * [ Estados globais ]
+   * [ Estados locais/globais ]
    ******************************************************************* */
   const { selectedBrand, selectedModel, selectedYear } =
     useContext(GlobalContext);
+  const [isLoading, setIsLoading] = React.useState(false);
 
   /*****
    * [ Handlers ]
    ******************************************************************* */
   const handleClick = React.useCallback(() => {
+    setIsLoading(true);
     const params = new URLSearchParams({
       selectedBrand,
       selectedModel,
       selectedYear,
     });
     router.push(`/resultado?${params.toString()}`);
-  }, [selectedBrand, selectedModel, selectedYear, router]);
+  }, [selectedBrand, selectedModel, selectedYear, router, setIsLoading]);
 
   return (
     <Grid
@@ -40,7 +42,9 @@ export default function GetPriceButton() {
         color="primary"
         variant="contained"
         onClick={handleClick}
-        disabled={!Boolean(selectedBrand && selectedModel && selectedYear)}
+        disabled={Boolean(
+          !(selectedBrand && selectedModel && selectedYear) || isLoading,
+        )}
       >
         Consultar preço
       </Button>
